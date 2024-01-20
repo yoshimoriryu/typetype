@@ -1,2 +1,2 @@
 # typetype
-create web-based typing test with django
+create web-based typing test with django-react
