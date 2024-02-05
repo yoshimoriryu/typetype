@@ -1,5 +1,31 @@
-venv/
+### django git ignore
 db.sqlite3
 __pycache__
 typetypetype/__pycache__
 
+
+### react git ignore
+# See https://help.github.com/articles/ignoring-files/ for more about ignoring files.
+
+# dependencies
+react-fe/node_modules
+react-fe/.pnp
+react-fe/.pnp.js
+
+# testing
+react-fe/coverage
+
+# production
+react-fe/build
+
+# misc
+react-fe/.DS_Store
+react-fe/.env.local
+react-fe/.env.development.local
+react-fe/.env.test.local
+react-fe/.env.production.local
+
+react-fe/npm-debug.log*
+react-fe/yarn-debug.log*
+react-fe/yarn-error.log*
+node_modules
