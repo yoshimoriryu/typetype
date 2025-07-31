@@ -29,3 +29,4 @@ react-fe/npm-debug.log*
 react-fe/yarn-debug.log*
 react-fe/yarn-error.log*
 node_modules
+.vercel

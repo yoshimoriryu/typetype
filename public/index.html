@@ -15,6 +15,13 @@
                 <i class="fas fa-keyboard"></i>
                 <h1>TypeType</h1>
             </div>
+            <div class="settings">
+                <label class="setting-toggle" tabindex="5">
+                    <input type="checkbox" id="cursorMode" />
+                    <span class="toggle-slider"></span>
+                    <span class="toggle-label">Normal Cursor</span>
+                </label>
+            </div>
             <div class="stats">
                 <div class="stat-item">
                     <span class="stat-label">WPM</span>
@@ -36,29 +43,17 @@
                 <div class="text-display" id="textDisplay">
                     <span class="text-prompt">Click start to begin your typing test...</span>
                 </div>
-                
-                <div class="input-container">
-                    <textarea 
-                        id="textInput" 
-                        placeholder="Start typing here..."
-                        disabled
-                        autocomplete="off"
-                        autocorrect="off"
-                        autocapitalize="off"
-                        spellcheck="false"
-                    ></textarea>
-                </div>
 
                 <div class="controls">
-                    <button id="startBtn" class="btn btn-primary">
+                    <button id="startBtn" class="btn btn-primary" tabindex="1">
                         <i class="fas fa-play"></i>
                         Start Test
                     </button>
-                    <button id="restartBtn" class="btn btn-secondary" style="display: none;">
+                    <button id="restartBtn" class="btn btn-secondary" tabindex="2" style="display: none;">
                         <i class="fas fa-redo"></i>
                         Restart
                     </button>
-                    <button id="newTextBtn" class="btn btn-secondary">
+                    <button id="newTextBtn" class="btn btn-secondary" tabindex="3">
                         <i class="fas fa-sync"></i>
                         New Text
                     </button>
@@ -85,7 +80,7 @@
                         <div class="result-label">Errors</div>
                     </div>
                 </div>
-                <button id="shareBtn" class="btn btn-primary">
+                <button id="shareBtn" class="btn btn-primary" tabindex="4">
                     <i class="fas fa-share"></i>
                     Share Results
                 </button>
