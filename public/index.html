@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>TypeType - Modern Typing Platform</title>
+    <link rel="stylesheet" href="styles.css">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+</head>
+<body>
+    <div class="container">
+        <header class="header">
+            <div class="logo">
+                <i class="fas fa-keyboard"></i>
+                <h1>TypeType</h1>
+            </div>
+            <div class="stats">
+                <div class="stat-item">
+                    <span class="stat-label">WPM</span>
+                    <span class="stat-value" id="wpm">0</span>
+                </div>
+                <div class="stat-item">
+                    <span class="stat-label">Accuracy</span>
+                    <span class="stat-value" id="accuracy">100%</span>
+                </div>
+                <div class="stat-item">
+                    <span class="stat-label">Time</span>
+                    <span class="stat-value" id="timer">60s</span>
+                </div>
+            </div>
+        </header>
+
+        <main class="main-content">
+            <div class="test-container">
+                <div class="text-display" id="textDisplay">
+                    <span class="text-prompt">Click start to begin your typing test...</span>
+                </div>
+                
+                <div class="input-container">
+                    <textarea 
+                        id="textInput" 
+                        placeholder="Start typing here..."
+                        disabled
+                        autocomplete="off"
+                        autocorrect="off"
+                        autocapitalize="off"
+                        spellcheck="false"
+                    ></textarea>
+                </div>
+
+                <div class="controls">
+                    <button id="startBtn" class="btn btn-primary">
+                        <i class="fas fa-play"></i>
+                        Start Test
+                    </button>
+                    <button id="restartBtn" class="btn btn-secondary" style="display: none;">
+                        <i class="fas fa-redo"></i>
+                        Restart
+                    </button>
+                    <button id="newTextBtn" class="btn btn-secondary">
+                        <i class="fas fa-sync"></i>
+                        New Text
+                    </button>
+                </div>
+            </div>
+
+            <div class="results-container" id="resultsContainer" style="display: none;">
+                <h2>Test Results</h2>
+                <div class="results-grid">
+                    <div class="result-card">
+                        <div class="result-value" id="finalWpm">0</div>
+                        <div class="result-label">WPM</div>
+                    </div>
+                    <div class="result-card">
+                        <div class="result-value" id="finalAccuracy">100%</div>
+                        <div class="result-label">Accuracy</div>
+                    </div>
+                    <div class="result-card">
+                        <div class="result-value" id="finalTime">0s</div>
+                        <div class="result-label">Time</div>
+                    </div>
+                    <div class="result-card">
+                        <div class="result-value" id="finalErrors">0</div>
+                        <div class="result-label">Errors</div>
+                    </div>
+                </div>
+                <button id="shareBtn" class="btn btn-primary">
+                    <i class="fas fa-share"></i>
+                    Share Results
+                </button>
+            </div>
+        </main>
+
+        <footer class="footer">
+            <p>&copy; 2024 TypeType. Built with ❤️ for typing enthusiasts.</p>
+        </footer>
+    </div>
+
+    <script src="/socket.io/socket.io.js"></script>
+    <script src="script.js"></script>
+</body>
+</html> 
